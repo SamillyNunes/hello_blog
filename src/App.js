@@ -1,12 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 
-console.log(window.location);
-
-const page = window.location.pathname === '/' ? <Home /> : <About />;
-
 function App() {
-  return page;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
