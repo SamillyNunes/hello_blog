@@ -3,15 +3,21 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Menu from "./components/Menu";
 import Footer from "components/Footer";
+import DefaultPage from "components/DefaultPage";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Menu />
-      
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* Essa rota que tem o elemento DefaultPage eh como uma rota "pai", que vai definir
+        qual rota vai ser apresentada. Essa estrutura vem das rotas aninhadas, usada para 
+        aproveitar uma estrutura (nesse caso eh o Banner) para diversas paginas  */}
+        <Route path="/" element={<DefaultPage />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
         <Route path="*" element={<div>Pagina nao encontrada!</div>} />
       </Routes>
 
