@@ -10,6 +10,10 @@ export default function Post() {
 
   const post = postsJson.find((p) => p.id === Number(params.id));
 
+  if(!post){
+    return <h1>Post não encontrado</h1>;
+  }
+
   return (
     <ModelPost
       coverImg={`/assets/posts/${post.id}/capa.png`}
