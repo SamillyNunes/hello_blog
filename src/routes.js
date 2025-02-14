@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Menu from "./components/Menu";
+import Footer from "components/Footer";
 
 function AppRoutes() {
   return (
@@ -13,6 +14,8 @@ function AppRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<div>Pagina nao encontrada!</div>} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
