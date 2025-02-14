@@ -15,8 +15,8 @@ function AppRoutes() {
         qual rota vai ser apresentada. Essa estrutura vem das rotas aninhadas, usada para 
         aproveitar uma estrutura (nesse caso eh o Banner) para diversas paginas  */}
         <Route path="/" element={<DefaultPage />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
         </Route>
         <Route path="*" element={<div>Pagina nao encontrada!</div>} />
       </Routes>
