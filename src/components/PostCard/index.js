@@ -4,7 +4,7 @@ import MainButton from "components/AppButton";
 
 export default function PostCard({ post }) {
   return (
-    <Link to={`posts/${post.id}`}>
+    <Link to={`/posts/${post.id}`}>
       <div className={styles.post}>
         <img
           className={styles.cover}
