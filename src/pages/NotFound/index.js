@@ -1,3 +1,4 @@
+import MainButton from "components/AppButton";
 import styles from "./NotFound.module.css";
 import error404 from "assets/erro_404.png";
 
@@ -19,7 +20,7 @@ export default function NotFound() {
         </p>
 
         <div className={styles.btnContent}>
-          <button>Voltar</button>
+            <MainButton size='lg'>Voltar</MainButton>
         </div>
 
         <img
