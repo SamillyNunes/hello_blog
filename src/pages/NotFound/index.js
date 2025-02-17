@@ -1,8 +1,11 @@
 import MainButton from "components/AppButton";
 import styles from "./NotFound.module.css";
 import error404 from "assets/erro_404.png";
+import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={styles.contentContainer}>
@@ -19,8 +22,8 @@ export default function NotFound() {
           inicial.
         </p>
 
-        <div className={styles.btnContent}>
-            <MainButton size='lg'>Voltar</MainButton>
+        <div onClick={()=> navigate("/")} className={styles.btnContent}>
+          <MainButton size="lg">Voltar</MainButton>
         </div>
 
         <img
