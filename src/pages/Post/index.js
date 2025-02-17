@@ -17,24 +17,17 @@ export default function Post() {
   }
 
   return (
-    <Routes>
-      <Route path="*" element={<DefaultPage />}>
-        <Route
-          index
-          element={
-            <ModelPost
-              coverImg={`/assets/posts/${post.id}/capa.png`}
-              title={post.titulo}
-            >
-              {/* Como o texto do post eh atualizado de maneira dinamica, nao da para usar
+    <DefaultPage>
+      <ModelPost
+        coverImg={`/assets/posts/${post.id}/capa.png`}
+        title={post.titulo}
+      >
+        {/* Como o texto do post eh atualizado de maneira dinamica, nao da para usar
               css em modulos ou derivados, precisa ser o tradicional */}
-              <div className="post-markdown-container">
-                <Markdown children={post.texto} />
-              </div>
-            </ModelPost>
-          }
-        />
-      </Route>
-    </Routes>
+        <div className="post-markdown-container">
+          <Markdown children={post.texto} />
+        </div>
+      </ModelPost>
+    </DefaultPage>
   );
 }
