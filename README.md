@@ -7,7 +7,7 @@ Você pode acessar o blog [aqui](https://hello-blog-neon.vercel.app/)
 ## Screenshots
 
 ![image](https://github.com/user-attachments/assets/e02f43f9-aa24-4922-afd9-0ec8727ba9ff)
-![image](https://github.com/user-attachments/assets/806b1786-a3ec-4a2e-a49c-e05be532af62)
+![image](https://github.com/user-attachments/assets/f94faba7-dbe1-49bd-88bb-92aab679441d)
 
 
 ## Execução
