@@ -6,11 +6,15 @@ import Footer from "components/Footer";
 import DefaultPage from "components/DefaultPage";
 import Post from "pages/Post";
 import NotFound from "pages/NotFound";
+import ScrollToTop from "components/ScrollToTop";
 
 function AppRoutes() {
+  
+
   return (
     <BrowserRouter>
       <Menu />
+      <ScrollToTop />
 
       <Routes>
         {/* Essa rota que tem o elemento DefaultPage eh como uma rota "pai", que vai definir
